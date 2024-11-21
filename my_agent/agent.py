@@ -82,5 +82,4 @@ workflow.add_conditional_edges(
 )
 workflow.add_edge("tool_node", "call_model")
 
-print("test")
 graph = workflow.compile()
