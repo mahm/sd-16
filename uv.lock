@@ -203,6 +203,18 @@ wheels = [
 ]
 
 [[package]]
+name = "click"
+version = "8.1.7"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "colorama", marker = "platform_system == 'Windows'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/96/d3/f04c7bfcf5c1862a2a5b845c6b2b360488cf47af55dfa79c98f6a6bf98b5/click-8.1.7.tar.gz", hash = "sha256:ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de", size = 336121 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/00/2e/d53fa4befbf2cfa713304affc7ca780ce4fc1fd8710527771b58311a3229/click-8.1.7-py3-none-any.whl", hash = "sha256:ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28", size = 97941 },
+]
+
+[[package]]
 name = "colorama"
 version = "0.4.6"
 source = { registry = "https://pypi.org/simple" }
@@ -587,6 +599,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/a9/f0/611786da5e973264a0e24ed04eabf7e04fac62598fe3ca16e4a67bda41d6/langgraph_checkpoint-2.0.4.tar.gz", hash = "sha256:17a20857090f805629a062986da739f003030e90388292e01614adcfb323d502", size = 20557 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/17/78/56f96f1151697fc4c826f59845a09cdb0f5c20917d84f4cfbeb50e3e810b/langgraph_checkpoint-2.0.4-py3-none-any.whl", hash = "sha256:0039b937d5de951145acc196e7cf64e2e38cc9475c75040855cbf9edcc69ff89", size = 23454 },
+]
+
+[[package]]
+name = "langgraph-cli"
+version = "0.1.56"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "click" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/55/48/6d247e2057e926eed6313fd3663897e7bbe173b041a3c626da24ad041969/langgraph_cli-0.1.56.tar.gz", hash = "sha256:703977211ed5e52a162c6bca1ddb9ab7097bfc4c16d2675b7a59477f0b22e3bc", size = 21278 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/34/e3/2aeb5822928d0587c7a213d65293cb2724348fdecb4c7162036aa237dbce/langgraph_cli-0.1.56-py3-none-any.whl", hash = "sha256:9e0ed343959007fc2125b47c76440d7f6aa4836ebd07e23bb4eca50d3ef761dc", size = 23814 },
 ]
 
 [[package]]
@@ -1090,6 +1114,11 @@ dependencies = [
     { name = "tavily-python" },
 ]
 
+[package.dev-dependencies]
+dev = [
+    { name = "langgraph-cli" },
+]
+
 [package.metadata]
 requires-dist = [
     { name = "langchain-anthropic", specifier = ">=0.3.0" },
@@ -1099,6 +1128,9 @@ requires-dist = [
     { name = "langgraph", specifier = ">=0.2.50" },
     { name = "tavily-python", specifier = ">=0.5.0" },
 ]
+
+[package.metadata.requires-dev]
+dev = [{ name = "langgraph-cli", specifier = "==0.1.56" }]
 
 [[package]]
 name = "sniffio"

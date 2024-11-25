@@ -12,3 +12,8 @@ dependencies = [
     "langgraph>=0.2.50",
     "tavily-python>=0.5.0",
 ]
+
+[tool.uv]
+dev-dependencies = [
+    "langgraph-cli==0.1.56",
+]

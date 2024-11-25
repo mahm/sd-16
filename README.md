@@ -24,15 +24,15 @@ $ cp .env.sample .env
 $ vi .env # お好きなエディタで編集してください
 ```
 
-続けて.envファイル内の以下のキーを設定して下さい。`TAVILY_API_KEY`ならびに`LANGCHAIN_API_KEY`の取得方法については次節で解説します。
+続けて.envファイル内の以下のキーを設定して下さい。`TAVILY_API_KEY`ならびに`LANGSMITH_API_KEY`の取得方法については次節で解説します。
 
 ```
 OPENAI_API_KEY=[発行されたAPIキーを設定します]
 ANTHROPIC_API_KEY=[発行されたAPIキーを設定します]
 TAVILY_API_KEY=[発行されたAPIキーを設定します]
-LANGCHAIN_TRACING_V2=true
-LANGCHAIN_API_KEY=[発行されたAPIキーを設定します]
-LANGCHAIN_PROJECT=sd-16
+LANGSMITH_TRACING_V2=true
+LANGSMITH_API_KEY=[発行されたAPIキーを設定します]
+LANGSMITH_PROJECT=sd-16
 ```
 
 お手元で動作を確認される際には、上記のセットアップの後に以下のコマンドを実行してご確認ください。
