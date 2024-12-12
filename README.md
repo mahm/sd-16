@@ -38,8 +38,7 @@ LANGSMITH_PROJECT=sd-16
 お手元で動作を確認される際には、上記のセットアップの後に以下のコマンドを実行してご確認ください。
 
 ```
-$ pip install -U langgraph-cli
-$ langgraph up
+$ uv run langgraph up
 ```
 
 ## Tavily APIキーの取得方法
